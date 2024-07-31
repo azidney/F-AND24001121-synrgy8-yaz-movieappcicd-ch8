@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "856166995738",
+    "project_id": "synrgy-137c4",
+    "storage_bucket": "synrgy-137c4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:856166995738:android:96e293c8b82990fc5a3ea3",
+        "android_client_info": {
+          "package_name": "com.example.movieapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQVnIhaOdL1PSY8trKvSiQAq_Pv3PYIHU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:856166995738:android:a89ffd32f30412d75a3ea3",
+        "android_client_info": {
+          "package_name": "com.example.movieapp.free"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQVnIhaOdL1PSY8trKvSiQAq_Pv3PYIHU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
