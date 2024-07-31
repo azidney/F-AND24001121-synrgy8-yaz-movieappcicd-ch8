@@ -29,8 +29,10 @@ class MovieRepositoryImpl @Inject constructor(
             Log.e("error", e.toString())
             emit(ApiError.handleHttpException(e))
         } catch (exception: IOException) {
+            Log.e("errorx", exception.toString())
             emit(Result.Error("Network error occurred. Please check your internet connection"))
         } catch (exception: Exception) {
+            Log.e("errory", exception.toString())
             emit(Result.Error(exception.message ?: "Unknown Error"))
         }
     }

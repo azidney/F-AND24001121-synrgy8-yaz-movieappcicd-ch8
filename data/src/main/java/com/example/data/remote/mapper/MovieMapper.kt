@@ -7,38 +7,38 @@ import com.example.domain.model.Dates
 import com.example.domain.model.MovieResponse
 import com.example.domain.model.ResultsItem
 
-fun MovieResponseDTO.toDomain(): MovieResponse {
+fun MovieResponseDTO?.toDomain(): MovieResponse {
     return MovieResponse(
-        dates = dates.toDomain(),
-        page = page,
-        totalPages = totalPages,
-        results = results.map { it.toDomain() },
-        totalResults = totalResults
+        dates = this?.dates?.toDomain() ?: Dates(maximum = "", minimum = ""),
+        page = this?.page ?: 0,
+        totalPages = this?.totalPages ?: 0,
+        results = this?.results?.map { it.toDomain() } ?: emptyList(),
+        totalResults = this?.totalResults ?: 0
     )
 }
 
-fun ResultsItemDTO.toDomain(): ResultsItem {
+fun ResultsItemDTO?.toDomain(): ResultsItem {
     return ResultsItem(
-        overview = overview,
-        originalLanguage = originalLanguage,
-        originalTitle = originalTitle,
-        video = video,
-        title = title,
-        genreIds = genreIds,
-        posterPath = posterPath,
-        backdropPath = backdropPath,
-        releaseDate = releaseDate,
-        popularity = popularity,
-        voteAverage = voteAverage,
-        id = id,
-        adult = adult,
-        voteCount = voteCount
+        overview = this?.overview ?: "",
+        originalLanguage = this?.originalLanguage ?: "",
+        originalTitle = this?.originalTitle ?: "",
+        video = this?.video ?: false,
+        title = this?.title ?: "",
+        genreIds = this?.genreIds ?: emptyList(),
+        posterPath = this?.posterPath ?: "",
+        backdropPath = this?.backdropPath ?: "",
+        releaseDate = this?.releaseDate ?: "",
+        popularity = this?.popularity ?: 0.0,
+        voteAverage = this?.voteAverage ?: 0.0,
+        id = this?.id ?: 0,
+        adult = this?.adult ?: false,
+        voteCount = this?.voteCount ?: 0
     )
 }
 
-fun DatesDTO.toDomain(): Dates {
+fun DatesDTO?.toDomain(): Dates {
     return Dates(
-        maximum = maximum,
-        minimum = minimum
+        maximum = this?.maximum ?: "",
+        minimum = this?.minimum ?: ""
     )
 }
