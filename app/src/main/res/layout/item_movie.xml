@@ -1,0 +1,63 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginBottom="15dp"
+    android:layout_height="wrap_content">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/iv_gambar"
+        android:layout_width="90dp"
+        android:scaleType="centerCrop"
+        app:riv_corner_radius="10dp"
+        android:layout_height="90dp"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <LinearLayout
+        android:id="@+id/asd"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:paddingVertical="10dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@id/iv_gambar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_gambar"
+        app:layout_constraintBottom_toTopOf="@id/iv_gambar"
+        >
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:maxLines="1"
+            android:textSize="16sp"
+            android:ellipsize="end"
+            android:textColor="@color/black"
+            android:text="Kentang goreng RR"
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_overview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="5dp"
+            android:maxLines="3"
+            android:textSize="13sp"
+            android:ellipsize="end"
+            android:textColor="@color/black"
+            android:text="Kentang goreng, cimolasd asd asd asd asdas das dasd asdaasd asd asda sdas dasd"
+            />
+
+
+
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".presentation.ui.activities.MainActivity">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:padding="15dp"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/kotak"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" >
+                <TextView
+                    android:id="@+id/tv_welcome"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:textSize="18sp"
+                    android:layout_height="wrap_content"
+                    android:text="Hello World!"/>
+
+                <ImageView
+                    android:id="@+id/btnProfile"
+                    android:src="@drawable/ic_profile"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:text="Profile"/>
+            </LinearLayout>
+
+
+
+            <ProgressBar
+                android:visibility="gone"
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:indeterminateTint="?android:attr/colorPrimary"
+                app:layout_constraintTop_toBottomOf="@id/kotak"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_movie"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/item_movie"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/kotak"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
