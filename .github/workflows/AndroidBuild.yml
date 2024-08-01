@@ -23,11 +23,19 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x ./gradlew
 
-      - name: Build With Gradle
-        run: ./gradlew build --stacktrace
+      - name: Sync Gradle
+        run: ./gradlew --refresh-dependencies
 
-      - name: Upload Build Artifact
+      - name: Build Free Variant
+        run: ./gradlew assembleFreeDebug --stacktrace
+
+      - name: Build Paid Variant
+        run: ./gradlew assemblePaidDebug --stacktrace
+
+      - name: Upload Free Build Artifact
         uses: actions/upload-artifact@v3.1.3
         with:
-          name: MovieApp.apk
-          path: app/build/outputs/apk/debug/app-debug.apk
+          name: MovieAppFree.apk
+          path: app/build/outputs/apk/free/debug/app-free-debug.apk
+
+
