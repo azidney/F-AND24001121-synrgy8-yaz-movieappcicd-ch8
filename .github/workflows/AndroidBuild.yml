@@ -24,11 +24,11 @@ jobs:
         run: chmod +x ./gradlew
 
       - name: Build With Gradle
-        run: ./gradlew build
+        run: ./gradlew build --stacktrace
 
-      - name: Upload  Build Artifact
+      - name: Upload Build Artifact
         uses: actions/upload-artifact@v3.1.3
         with:
           name: MovieApp.apk
-          path: app/builds/outputs/apk/debug/app-debug.apk
-
+          path: app/build/outputs/apk/debug/app-debug.apk
+g
